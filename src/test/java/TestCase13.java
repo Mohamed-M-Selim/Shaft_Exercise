@@ -17,16 +17,10 @@ public class TestCase13 {
     @Test(description = "Add Products in Cart")
     private void validateProductSearch(){
         new HomePage(driver)
-                .navigateToHome();
-        new ProductsPage(driver)
-                .addFirstProductToCart()
-                .clickContinueShopping()
-                .addSecondProductToCart()
-                .clickViewCart();
-        new CartPage(driver).validateProductsAreAddedToCart()
-                .validatePrices()
-                .validateQuantities()
-                .validateTotalPrices();
+                .navigateToHome().clickViewProductOnProduct4();
+        new ProductDetailsPage(driver)
+                .setQuanatity("4").clickAddToCart().clickViewCart();
+        new CartPage(driver).validateProductQuantity("4");
     }
 
     @AfterMethod

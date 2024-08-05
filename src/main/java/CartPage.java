@@ -31,8 +31,18 @@ public class CartPage {
     private By secondProductTotalPrice =
             By.xpath("//tr[@id=\"product-2\"]//p[@class=\"cart_total_price\"]");
 
+    private By fourthProductQuantity =
+            By.xpath("//tr[@id=\"product-4\"]//td[@class=\"cart_quantity\"]//button");
+
+
 
     //Actions
+
+    public String firstProductQunatityValue(){
+        String quantityValue;
+        quantityValue = driver.element().getText(firstProductQuantity);
+        return quantityValue;
+    }
 
     //Assertions
     @Step("Verify both products are added to Cart")
@@ -60,6 +70,12 @@ public class CartPage {
     public CartPage validateTotalPrices(){
         driver.element().verifyThat(firstProductTotalPrice).isVisible();
         driver.element().verifyThat(secondProductTotalPrice).isVisible();
+        return this ;
+    }
+
+    @Step("Verify that product is displayed in cart page with exact quantity")
+    public CartPage validateProductQuantity(String quantity){
+        driver.element().verifyThat(fourthProductQuantity).text().equals(quantity);
         return this ;
     }
 }

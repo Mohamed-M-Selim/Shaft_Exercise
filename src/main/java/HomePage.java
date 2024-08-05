@@ -19,7 +19,7 @@ public class HomePage {
     private By arrowButton = By.xpath("//i[@class=\"fa fa-arrow-circle-o-right\"]");
     private By sucessSubscribe = By.xpath("//div[@id=\"success-subscribe\"]");
     private By ProductsButton = By.xpath("//a[@href=\"/products\"]");
-    private By viewProductButton =
+    private By viewProductButtonProduct4 =
             By.xpath("//a[@href=\"/product_details/4\"]//i[@class=\"fa fa-plus-square\"]");
 
 
@@ -28,6 +28,11 @@ public class HomePage {
         driver.browser().navigateToURL("https://automationexercise.com/");
         softAssert.assertEquals(driver.browser().getCurrentURL(),"https://automationexercise.com/");
         return this ;
+    }
+
+    public HomePage clickViewProductOnProduct4(){
+        driver.element().click(viewProductButtonProduct4);
+        return this;
     }
 
     public HomePage clickOnProductsButton(){
