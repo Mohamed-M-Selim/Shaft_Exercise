@@ -13,7 +13,7 @@ public class HomePage {
         this.driver = driver ;
     }
 
-    //Locators
+    //Locatorss
     private By subscriptionText = By.xpath("//div[@class=\"single-widget\"]//h2");
     private By subscribeEmail = By.xpath("//input[@id=\"susbscribe_email\"]");
     private By arrowButton = By.xpath("//i[@class=\"fa fa-arrow-circle-o-right\"]");
