@@ -1,0 +1,25 @@
+{
+  "website": {
+    "url": "https://automationexercise.com/"
+  },
+  "user": {
+    "personalInfo": {
+      "name": "User1",
+      "firstName": "User",
+      "lastName": "One",
+      "email": "userx@gmail.com",
+      "password": "abcd123456"
+    },
+    "companyInfo": {
+      "company": "Amit",
+      "address": {
+        "addressOne": "Nasr City",
+        "addressTwo": "New Cairo",
+        "state": "Ontario",
+        "city": "Toronto",
+        "zipCode": "11835"
+      },
+      "mobileNumber": "01111111111"
+    }
+  }
+}
