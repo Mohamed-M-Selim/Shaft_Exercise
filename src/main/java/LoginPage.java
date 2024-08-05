@@ -54,7 +54,7 @@ public class LoginPage {
     //Assertions
     @Step("Validate that the user is logged in")
     public void validateLogin(){
-        driver.element().verifyThat(logoutButton).doesNotExist().perform();
+        driver.element().verifyThat(logoutButton).isEnabled().perform();
     }
 
 }

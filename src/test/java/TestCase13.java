@@ -4,7 +4,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class LoginTests {
+public class TestCase13 {
 
     private SHAFT.GUI.WebDriver driver ;
 
@@ -14,12 +14,13 @@ public class LoginTests {
         driver = new SHAFT.GUI.WebDriver();
     }
 
-    @Test(description = "Validate user login")
-    private void validateLogin(){
-        new LoginPage(driver).navigateToURL("https://automationexercise.com/")
-                .clickOnLoginPageButton()
-                .fillLoginData("mostafa@gmail.com","abcd123456")
-                .clickLoginButton().validateLogin();
+    @Test(description = "Add Products in Cart")
+    private void validateProductSearch(){
+        new HomePage(driver)
+                .navigateToHome().clickViewProductOnProduct4();
+        new ProductDetailsPage(driver)
+                .setQuanatity("4").clickAddToCart().clickViewCart();
+        new CartPage(driver).validateProductQuantity("4");
     }
 
     @AfterMethod

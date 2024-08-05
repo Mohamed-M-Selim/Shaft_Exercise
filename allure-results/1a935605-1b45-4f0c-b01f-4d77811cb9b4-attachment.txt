@@ -1,0 +1,5 @@
+[ReportManager] Setting "targetOperatingSystem" property with "windows". @05-08-2024 18:47:51.0325 PM
+[ReportManager] Capabilities {acceptInsecureCerts: true, browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-debugging-pipe, --no-sandbox, --start-maximized], extensions: [], prefs: {download.default_directory: C:\Users\selim\Desktop\soft..., download.prompt_for_download: false, profile.default_content_settings.popups: 0}}, pageLoadStrategy: normal, timeouts: {pageLoad: 60000, script: 60000}, unhandledPromptBehavior: ignore, webSocketUrl: true} @05-08-2024 18:47:51.0363 PM
+[ReportManager] Attempting to run locally on: "Windows | Microsoft edge". @05-08-2024 18:47:51.0363 PM
+[ReportManager] Identifying OS/Driver combination. Please note that if a new browser/driver executable will be downloaded it may take some time depending on your connection... @05-08-2024 18:47:51.0363 PM
+[ReportManager] Successfully Opened: "Windows | Microsoft edge". @05-08-2024 18:51:41.0026 PM
