@@ -168,13 +168,13 @@ public class RegisterPage {
         return this ;
     }
 
-    public RegisterPage fillFirstName(String firstN) {
-        driver.element().type(firstNameField, firstN);
+    public RegisterPage fillFirstName(String firstName) {
+        driver.element().type(firstNameField, firstName);
         return this ;
     }
 
-    public RegisterPage fillLastName(String lastN) {
-        driver.element().type(lastNameField,lastN);
+    public RegisterPage fillLastName(String lastName) {
+        driver.element().type(lastNameField,lastName);
         return this ;
     }
 
@@ -193,10 +193,10 @@ public class RegisterPage {
         driver.element().type(adressTwoField,addressTwo);
         return this ;
     }
-    public RegisterPage fillAddressData(String firstN, String lastN,
+    public RegisterPage fillAddressData(String firstName, String lastName,
                                 String company, String addressOne, String addressTwo) {
-        fillFirstName(firstN);
-        fillLastName(lastN);
+        fillFirstName(firstName);
+        fillLastName(lastName);
         fillCompany(company);
         fillAddress(addressOne);
         fillAddressTwo(addressTwo);
