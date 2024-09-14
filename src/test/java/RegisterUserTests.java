@@ -24,6 +24,7 @@ public class RegisterUserTests {
                 .verifyingEnterAccountInformationIcon()
                 .fillTitle()
                 .fillPassword("Abd1522004")
+                .selectDateOfBirth("2")
                 .clickOnSignupForOurNewsletterCheckbox()
                 .clickOnReceiveSpecialOffersFromOurPartnersCheckbox()
                 .fillFirstName("Abdelrahman")
@@ -36,7 +37,6 @@ public class RegisterUserTests {
                 .fillZipCode("16566")
                 .fillMobileNumber("01000070407")
                 .clickOnCreateAccountButton()
-                /*.verifyingAccountCreatedIcon()*/
                 .clickOnContinueButton()
                 .verifyingLoggedInAsUserNameIcon()
                 .clickOnDeleteAccount()

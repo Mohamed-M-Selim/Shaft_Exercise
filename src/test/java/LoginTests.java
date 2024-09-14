@@ -15,9 +15,9 @@ public class LoginTests {
 
     @Test(description = "Validate user login")
     private void validateLogin(){
-        new LoginPage(driver).navigateToURL("https://automationexercise.com/")
-                .clickOnLoginPageButton()
-                .fillLoginData("mostafa@gmail.com","abcd123456")
+        new LoginPage(driver).navigateToURL("http://automationexercise.com");
+
+        new LoginPage(driver).fillLoginData("mostafa@gmail.com","abcd123456")
                 .clickLoginButton().validateLogin();
     }
 

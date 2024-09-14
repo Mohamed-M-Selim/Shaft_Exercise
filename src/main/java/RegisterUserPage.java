@@ -21,6 +21,7 @@ public class RegisterUserPage {
     private By enterAccountInformationIcon = By.xpath("//div[@class=\"login-form\"]");
     private By titleField = By.xpath("//div[@id=\"uniform-id_gender1\"]");
     private By passwordField = By.xpath("//input[@name=\"password\"]");
+    private By dateOfBirth = By.xpath("//select[@id=\"days\"]");
     private By signupForOurNewsletterCheckbox = By.xpath("//input[@name=\"newsletter\"]");
     private By receiveSpecialOffersFromOurPartnersCheckbox = By.xpath("//input[@name=\"optin\"]");
     private By firstNameField = By.xpath("//input[@data-qa=\"first_name\"]");
@@ -33,7 +34,6 @@ public class RegisterUserPage {
     private By zipCodeField = By.xpath("//input[@data-qa=\"zipcode\"]");
     private By mobileNumberField = By.xpath("//input[@data-qa=\"mobile_number\"]");
     private By createAccountButton = By.xpath("//button[@data-qa=\"create-account\"]");
-    /*private By accountCreatedIcon = By.xpath("class=\"col-sm-9 col-sm-offset-1\"");*/
     private By continueButton = By.xpath("//a[@data-qa=\"continue-button\"]");
     private By loggedInAsUserNameIcon = By.xpath("//i[@class=\"fa fa-user\"]");
     private By deleteAccountButton = By.xpath("//a[@href=\"/delete_account\"]");
@@ -74,6 +74,10 @@ public class RegisterUserPage {
     }
     public RegisterUserPage fillPassword(String Password){
         driver.element().type(passwordField,Password);
+        return this;
+    }
+    public RegisterUserPage selectDateOfBirth(String Date){
+        driver.element().select(dateOfBirth, Date);
         return this;
     }
     public RegisterUserPage clickOnSignupForOurNewsletterCheckbox(){
@@ -124,10 +128,6 @@ public class RegisterUserPage {
         driver.element().click(createAccountButton);
         return this;
     }
-  /*  public RegisterUserPage verifyingAccountCreatedIcon(){
-        driver.element().verifyThat(accountCreatedIcon).isVisible().perform();
-        return this;
-    }*/
     public RegisterUserPage clickOnContinueButton(){
         driver.element().click(continueButton);
         return this;
